@@ -1,37 +1,38 @@
 class Animal {
-	
-}
-
-class Cat {
-  constructor(name, sex) {
+	constructor(name, sex) {
 		this.name = name;
 		this.sex = sex;
 	}
+}
+
+class Cat extends Animal {
+  constructor(name, sex) {
+  	super(name, sex);
+  }
   speak() {
   	return `${this.name} says meow!`
   }
 }
  
-class Dog {
+class Dog extends Animal {
   constructor(name, sex) {
-		this.name = name;
-		this.sex = sex;
-	}
+  	super(name, sex);
+  }
   speak() {
   	return `${this.name} says woof!`
   }
 }
  
-class Bird {
+class Bird extends Animal {
   constructor(name, sex) {
-		this.name = name;
-		this.sex = sex;
-	}
+  	super(name, sex);
+  }
   speak() {
-    if (this.sex == "male") {
+    if (this.sex == "male")
+    {
       return `It's me! ${this.name}, the parrot!`
         }
-    else {
+      else {
       return `${this.name} says squawk!`
     }
   }
